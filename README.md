@@ -1,1 +1,1 @@
-# Code-Refactoring-Homework-1
+Exercise in refactoring an existing webpage.
