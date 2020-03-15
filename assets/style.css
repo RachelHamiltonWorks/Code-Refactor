@@ -1,6 +1,6 @@
 /* compressed short rules in all instances */
 
-/* is this universal selector redundent or obsolete or slow?  feels off but can't tell for sure 🤔 */
+/* is this universal selector redundant or obsolete or "slow"?  feels off but can't tell for sure 🤔 */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -9,13 +9,11 @@
 
 body {background-color: #d9dcd6;}
 
-.hero {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
-    background-position: center;
+.header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2a607c;
+    color: #ffffff;
 }
 
 /* consolidated ".header h1" with h1 */
@@ -52,9 +50,23 @@ h1 {
     float: right;
     margin-left: 25px;
 }
-/*the css below should be consolidated further due to multiple redudancies,
+
+/*this hero class takes a long time to load - maybe should be handled as an img in html instead,
+  or another way, but I see others reasons to leave as a hero class
+  and not sure how to speed up rendering*/
+
+.hero {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("./images/digital-marketing-meeting.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*all the css below should really be consolidated further due to multiple redudancies,
   but I could not do so without significantly changing the html elements,
-  and essentially entirely rewriting the code, which seems to go beyond refactoring*/  
+  and essentially entirely rewriting/redesigning all of the html, which seems to go beyond refactoring*/  
 
 .content {
     width: 75%;
@@ -117,8 +129,8 @@ h1 {
     font-size: 36px;
 }
 
-/* considered moving 'p' and 'a' selectors up to reflect the broader scope of those selectors
-   unsure */
+/* considered moving 'p' and 'a' selectors up to reflect the broader scope of those selectors -
+   left them here where they fall in the html */
 p {font-size: 16px;}
 
 a {
